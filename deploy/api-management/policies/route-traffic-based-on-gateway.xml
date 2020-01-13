@@ -3,8 +3,8 @@
         <base />
         <set-variable name="upstreamUrl" value="@(context.Api.ServiceUrl.ToString())" />
         <choose>
-            <when condition="@(context.Deployment.Region == "Shippy HQ")">
-                <set-variable name="upstreamUrl" value="http://demo.microservices.products.api" />
+            <when condition="@(context.Deployment.Region == "Finland")">
+                <set-variable name="upstreamUrl" value="http://demo.apis.bacon" />
             </when>
             <otherwise />
         </choose>

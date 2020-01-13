@@ -10,9 +10,12 @@
         <choose>
             <when condition="@(context.Variables.GetValueOrDefault<int>("urlId") == 1)">
                 <!-- Use default host -->
+                <set-query-parameter name="code" exists-action="override">
+                    <value>n8LnuUB13Bqm6A5411A7A9G869CiGQeGdAgUQdoOum/qtv1bhDCWUg==</value>
+                </set-query-parameter>
             </when>
             <when condition="@(context.Variables.GetValueOrDefault<int>("urlId") == 2)">
-                <set-variable name="upstreamUrl" value="https://codito-microservices-products.azurewebsites.net" />
+                <set-variable name="upstreamUrl" value="https://iglooconf-2020-paas.azurewebsites.net" />
             </when>
             <otherwise>
                 <return-response>
